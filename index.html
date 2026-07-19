@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Earth Ears — A calm hub for original music, vlogs, and creative projects.">
+  <meta name="theme-color" content="#0a0c10">
+  <title>Earth Ears</title>
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+</head>
+<body>
+  <div class="cosmos-bg" aria-hidden="true">
+    <canvas id="cosmos-canvas"></canvas>
+    <div class="cosmos-bg__overlay"></div>
+  </div>
+
+
+<button id="bgm-toggle" aria-label="Background Music">
+  🔇
+</button>
+
+<audio id="bgm" loop>
+ <source src="bgm.mp3" type="audio/mpeg">
+</audio>
+
+
+  <main class="hub">
+    <!-- Earth Ears -->
+    <div class="card-wrap card-float reveal" style="--float-delay: 0s">
+      <section class="card glass" data-tilt>
+        <header class="card__header">
+          <span class="card__emoji" aria-hidden="true">🌿</span>
+          <h1 class="card__title">Earth Ears</h1>
+        </header>
+        <nav class="card__links" aria-label="Earth Ears streaming links">
+          <a href="https://open.spotify.com/artist/2YK6sjJI03Fgn9ll0oRJhm?si=s-N5G-8dR7y8d0TLxom3fA" class="link glass-subtle" target="_blank" rel="noopener noreferrer">
+            <span class="link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.402.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            </span>
+            Spotify
+            <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="https://music.apple.com/us/artist/earth-ears/6777767495" class="link glass-subtle" target="_blank" rel="noopener noreferrer">
+            <span class="link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043C21.003.517 20.373.285 19.7.164c-.517-.093-1.038-.135-1.564-.15-.04-.003-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.124.928 1.277 1.796.806 3.008c-.192.484-.29 1.007-.351 1.554-.046.4-.06.806-.063 1.21v10.452c0 .698.089 1.383.343 2.037.571 1.512 1.863 2.429 3.387 2.904.447.177.912.258 1.392.312.403.043.808.056 1.213.056h10.218c.152-.003.303-.009.455-.025.634-.065 1.266-.166 1.866-.412 1.382-.544 2.363-1.428 2.896-2.832.192-.486.293-1.007.351-1.558.031-.224.048-.45.063-.674v-.008c.003-.21.006-.424.006-.636V6.124zm-6.494 10.098V8.305c0-.154 0-.154-.145-.192-.494-.15-.988-.282-1.49-.391-.494-.107-.988-.192-1.486-.263-.063-.008-.12-.025-.184-.025-.063 0-.12.017-.18.025-.502.071-.996.156-1.49.263-.502.109-.996.241-1.49.391-.145.038-.145.038-.145.192v7.917c0 .107.042.192.145.23.502.15 1.002.282 1.506.391.502.107.996.192 1.494.263.063.008.12.025.184.025.063 0 .12-.017.18-.025.502-.071.996-.156 1.49-.263.504-.109 1.004-.241 1.506-.391.103-.038.145-.123.145-.23z"/></svg>
+            </span>
+            Apple Music
+            <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="https://youtube.com/channel/UCmXCuwyJIQuU7QvEyT-L4JQ?si=M9C27WVmPcg52m57" class="link glass-subtle" target="_blank" rel="noopener noreferrer">
+            <span class="link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm0 19.104c-3.924 0-7.104-3.18-7.104-7.104S8.076 4.896 12 4.896s7.104 3.18 7.104 7.104-3.18 7.104-7.104 7.104zm0-13.104c-3.312 0-6 2.688-6 6s2.688 6 6 6 6-2.688 6-6-2.688-6-6-6zm-1.2 9.348V8.652L16.2 12l-5.4 3.348z"/></svg>
+            </span>
+            YouTube Music
+            <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </nav>
+      </section>
+    </div>
+
+    <!-- 듀르로그 -->
+    <div class="card-wrap card-float reveal" style="--float-delay: 0.6s">
+      <section class="card glass" data-tilt>
+        <header class="card__header">
+          <span class="card__emoji" aria-hidden="true">📹</span>
+          <h2 class="card__title">듀르로그</h2>
+        </header>
+        <nav class="card__links" aria-label="듀르로그 links">
+          <a href="https://youtube.com/@dyureu?si=s4QjyypfbAP1sOGM" class="link glass-subtle" target="_blank" rel="noopener noreferrer">
+            <span class="link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </span>
+            YouTube
+            <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </nav>
+      </section>
+    </div>
+
+    <!-- hhh.mp3 -->
+    <div class="card-wrap card-float reveal" style="--float-delay: 1.2s">
+      <section class="card glass" data-tilt>
+        <header class="card__header">
+          <span class="card__emoji" aria-hidden="true">🎵</span>
+          <h2 class="card__title">hhh.mp3</h2>
+        </header>
+        <nav class="card__links" aria-label="hhh.mp3 streaming links">
+          <a href="https://open.spotify.com/artist/3dpmfJGvgh5gElR7a5QGqM?si=HdvYPOsBQoiBzi02uMubzg" class="link glass-subtle" target="_blank" rel="noopener noreferrer">
+            <span class="link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.402.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            </span>
+            Spotify
+            <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="https://music.apple.com/us/artist/hhh-mp3/1851733313" class="link glass-subtle" target="_blank" rel="noopener noreferrer">
+            <span class="link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.997 6.124c0-.738-.065-1.47-.24-2.19-.317-1.31-1.062-2.31-2.18-3.043C21.003.517 20.373.285 19.7.164c-.517-.093-1.038-.135-1.564-.15-.04-.003-.083-.01-.124-.013H5.988c-.152.01-.303.017-.455.026C4.786.07 4.043.15 3.34.428 2.124.928 1.277 1.796.806 3.008c-.192.484-.29 1.007-.351 1.554-.046.4-.06.806-.063 1.21v10.452c0 .698.089 1.383.343 2.037.571 1.512 1.863 2.429 3.387 2.904.447.177.912.258 1.392.312.403.043.808.056 1.213.056h10.218c.152-.003.303-.009.455-.025.634-.065 1.266-.166 1.866-.412 1.382-.544 2.363-1.428 2.896-2.832.192-.486.293-1.007.351-1.558.031-.224.048-.45.063-.674v-.008c.003-.21.006-.424.006-.636V6.124zm-6.494 10.098V8.305c0-.154 0-.154-.145-.192-.494-.15-.988-.282-1.49-.391-.494-.107-.988-.192-1.486-.263-.063-.008-.12-.025-.184-.025-.063 0-.12.017-.18.025-.502.071-.996.156-1.49.263-.502.109-.996.241-1.49.391-.145.038-.145.038-.145.192v7.917c0 .107.042.192.145.23.502.15 1.002.282 1.506.391.502.107.996.192 1.494.263.063.008.12.025.184.025.063 0 .12-.017.18-.025.502-.071.996-.156 1.49-.263.504-.109 1.004-.241 1.506-.391.103-.038.145-.123.145-.23z"/></svg>
+            </span>
+            Apple Music
+            <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+          <a href="https://youtube.com/@hhh.mp3?si=xwHlaFB89xesRHSb" class="link glass-subtle" target="_blank" rel="noopener noreferrer">
+            <span class="link__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.376 0 0 5.376 0 12s5.376 12 12 12 12-5.376 12-12S18.624 0 12 0zm0 19.104c-3.924 0-7.104-3.18-7.104-7.104S8.076 4.896 12 4.896s7.104 3.18 7.104 7.104-3.18 7.104-7.104 7.104zm0-13.104c-3.312 0-6 2.688-6 6s2.688 6 6 6 6-2.688 6-6-2.688-6-6-6zm-1.2 9.348V8.652L16.2 12l-5.4 3.348z"/></svg>
+            </span>
+            YouTube Music
+            <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </nav>
+      </section>
+    </div>
+
+    <!-- Archive -->
+    <section class="archive reveal" aria-label="Archive">
+      <div class="archive__divider" aria-hidden="true"></div>
+      <p class="archive__label">Archive</p>
+
+      <div class="card-wrap">
+        <article class="card card--archive glass">
+          <header class="card__header card__header--compact">
+            <h3 class="card__title card__title--small">hhh.mp4</h3>
+          </header>
+          <nav class="card__links" aria-label="hhh.mp4 links">
+            <a href="https://youtube.com/@hhh.mp4?si=_mgF5SgpxRM-sRTE" class="link link--archive glass-subtle" target="_blank" rel="noopener noreferrer">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </span>
+              YouTube
+              <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </nav>
+        </article>
+      </div>
+
+      <div class="card-wrap">
+        <article class="card card--archive glass">
+          <header class="card__header card__header--compact">
+            <h3 class="card__title card__title--small">구) ojo.a / hhh.playlist / hhh.mbti.inst</h3>
+          </header>
+          <nav class="card__links" aria-label="Archive playlist links">
+            <a href="https://youtube.com/@hhh.playlist?si=d3_Bwzqv03gP6W3M" class="link link--archive glass-subtle" target="_blank" rel="noopener noreferrer">
+              <span class="link__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              </span>
+              YouTube
+              <svg class="link__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+            </a>
+          </nav>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Earth Ears</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
